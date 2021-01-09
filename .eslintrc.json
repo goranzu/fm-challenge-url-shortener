@@ -24,7 +24,9 @@
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "no-console": "warn"
+    "no-console": "warn",
+    "no-unused-vars": "warn",
+    "jsx-a11y/no-redundant-roles": "warn"
   },
   "settings": {
     "react": { "version": "detect" },
