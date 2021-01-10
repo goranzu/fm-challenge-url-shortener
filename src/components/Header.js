@@ -5,7 +5,7 @@ import { ReactComponent as Menu } from "../assets/icons/menu.svg";
 function Header() {
   return (
     <header className="header">
-      <div className="container">
+      <div className="container flex">
         <div className="logo">
           <Logo />
         </div>
@@ -36,7 +36,7 @@ function Header() {
         </nav>
         <button className="btn">
           <span className="sr-only">Open mobile navigation</span>
-          <Menu />
+          <Menu width="32px" height="32px" />
         </button>
       </div>
     </header>

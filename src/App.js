@@ -12,6 +12,7 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <Results />
         <Statistics />
         <CTA />
       </main>
