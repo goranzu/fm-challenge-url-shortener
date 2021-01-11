@@ -270,3 +270,44 @@ main > section + section {
 .statistics {
   padding-top: 3.5em;
 }
+
+.statcard {
+  background-color: var(--clr-neutral-300);
+  padding: 2em 1em;
+  border-radius: 10px;
+  position: relative;
+}
+
+.statcard .icon {
+  background-color: var(--clr-primary-500);
+  display: inline-block;
+  padding: 1.25em;
+  border-radius: 100vw;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statcard:not(:last-of-type)::after {
+  display: block;
+  content: "";
+  background-color: var(--clr-primary-400);
+  width: 10px;
+  height: 100px;
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cards {
+  --fl: 5em;
+}
+
+.statcard > * + * {
+  margin-top: 1.5em;
+}

@@ -35,7 +35,7 @@ function Statistics() {
           Track how your links are performing across the web with our advanced
           statistics dashboard.
         </p>
-        <div className="cards">
+        <div className="cards flow">
           {cards.map((card) => (
             <StatCard
               key={card.heading}
