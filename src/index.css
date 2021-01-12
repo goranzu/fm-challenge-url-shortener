@@ -311,3 +311,55 @@ main > section + section {
 .statcard > * + * {
   margin-top: 1.5em;
 }
+
+/* CTA */
+
+.cta {
+  background-image: url("./assets/images/bg-boost-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: 40px center;
+  background-color: var(--clr-primary-500);
+  color: var(--clr-neutral-300);
+  padding: 5em 0;
+}
+
+.cta .btn {
+  font-weight: var(--fw-500);
+}
+
+/* Footer */
+
+.footer {
+  padding: 3em 0 2em 0;
+  color: var(--clr-neutral-300);
+  background-color: var(--clr-neutral-600);
+}
+
+.footer .logo path {
+  fill: var(--clr-neutral-300);
+}
+
+.footer .list-header {
+  text-transform: capitalize;
+  font-weight: var(--fw-500);
+}
+
+.footer .btn-link {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  opacity: .8;
+  cursor: pointer;
+}
+
+.footer .social-media > * {
+  cursor: pointer;
+}
+
+.footer .social-media > * + * {
+  margin-left: 1em;
+}
+
+.footer .attribution a {
+  color: inherit;
+}

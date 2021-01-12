@@ -26,7 +26,7 @@ function Footer() {
   function createNavLinks() {
     return navLists.map((list) => (
       <div key={list.header} className={`${list.header}-list flex flow`}>
-        <p>{list.header}</p>
+        <p className="list-header">{list.header}</p>
         {list.links.map((link) => (
           <button key={link} className="btn-link">
             {link}
@@ -37,7 +37,7 @@ function Footer() {
   }
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="container flow">
         <div className="logo">
           <Logo />
         </div>
