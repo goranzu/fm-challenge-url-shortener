@@ -1,5 +1,4 @@
 import React from "react";
-import UrlForm from "./UrlForm";
 import Illustration from "../assets/images/illustration-working.svg";
 
 function Hero() {

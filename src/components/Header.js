@@ -9,9 +9,9 @@ function Header() {
         <div className="logo">
           <Logo />
         </div>
-        <nav hidden className="primary-nav">
+        <nav className="primary-nav flex">
           <div className="left">
-            <ul role="list">
+            <ul role="list" className="flex">
               <li>
                 <a href="#fetures">Features</a>
               </li>
@@ -24,17 +24,17 @@ function Header() {
             </ul>
           </div>
           <div className="right">
-            <ul role="list">
+            <ul role="list" className="flex">
               <li>
-                <button className="btn">Login</button>
+                <button className="btn btn--transparent">Login</button>
               </li>
               <li>
-                <button className="btn bg-green">Sign Up</button>
+                <button className="btn bg-green btn--pill">Sign Up</button>
               </li>
             </ul>
           </div>
         </nav>
-        <button className="btn">
+        <button className="btn open-nav">
           <span className="sr-only">Open mobile navigation</span>
           <Menu width="32px" height="32px" />
         </button>
