@@ -13,7 +13,7 @@ const cards = [
   },
   {
     Icon: DetailSVG,
-    heading: "Brand Recognition",
+    heading: "Detailed Records",
     text:
       "Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.",
   },

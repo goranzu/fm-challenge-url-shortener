@@ -25,19 +25,20 @@ const mediaLinks = [Facebook, Twitter, Pintrest, Instagram];
 function Footer() {
   function createNavLinks() {
     return navLists.map((list) => (
-      <div key={list.header} className={`${list.header}-list flex flow`}>
+      <ul role="list" key={list.header} className={`${list.header}-list flow`}>
         <p className="list-header">{list.header}</p>
         {list.links.map((link) => (
-          <button key={link} className="btn-link">
-            {link}
-          </button>
+          <li key={link}>
+            {/* Button because of jsx-a11y eslint plugin */}
+            <button className="btn-link">{link}</button>
+          </li>
         ))}
-      </div>
+      </ul>
     ));
   }
   return (
     <footer className="footer">
-      <div className="container flow">
+      <div className="container flow footer-content">
         <div className="logo">
           <Logo />
         </div>

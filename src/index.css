@@ -161,7 +161,7 @@ h3 {
 /* layout */
 
 .container {
-  max-width: 71rem;
+  max-width: 95rem;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -273,12 +273,12 @@ main > section + section {
   width: 120%;
   height: auto;
   position: relative;
-  left: 4rem;
+  left: 2rem;
   max-height: 470px;
 }
 
 @media (min-width: 50rem) {
-  .hero {
+  .hero .content {
     display: flex;
     flex-direction: row-reverse;
     text-align: left;
@@ -288,6 +288,7 @@ main > section + section {
   .hero .text-box {
     margin: 0;
     flex-basis: 100%;
+    padding-left: 0;
   }
 
   .hero .text-box p {
@@ -378,6 +379,13 @@ main > section + section {
 
 .statistics {
   padding-top: 3.5em;
+  padding-bottom: 5em;
+}
+
+.statistics p {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .statcard {
@@ -385,6 +393,9 @@ main > section + section {
   padding: 2em 1em;
   border-radius: 10px;
   position: relative;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .statcard .icon {
@@ -421,11 +432,56 @@ main > section + section {
   margin-top: 1.5em;
 }
 
+@media (min-width: 55rem) {
+  .cards {
+    display: flex;
+  }
+
+  .cards > * {
+    margin-top: 0;
+  }
+
+  .cards > * + * {
+    margin-left: 4em;
+  }
+
+  .statcard {
+    align-self: flex-start;
+  }
+
+  .statcard .icon {
+    left: 25%;
+  }
+
+  .statcard:not(:last-of-type)::after {
+    left: auto;
+    bottom: auto;
+    transform: unset;
+    right: -200px;
+    top: 115px;
+    height: 10px;
+    width: 200px;
+  }
+
+  .statcard:nth-of-type(1)::after {
+    top: 165px;
+  }
+
+  .statcard:nth-of-type(2) {
+    margin-top: 3em;
+  }
+
+  .statcard:nth-of-type(3) {
+    margin-top: 6em;
+  }
+}
+
 /* CTA */
 
 .cta {
   background-image: url("./assets/images/bg-boost-mobile.svg");
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: 40px center;
   background-color: var(--clr-primary-500);
   color: var(--clr-neutral-300);
@@ -434,6 +490,12 @@ main > section + section {
 
 .cta .btn {
   font-weight: var(--fw-500);
+}
+
+@media (min-width: 58rem) {
+  .cta {
+    background-image: url("./assets/images/bg-boost-desktop.svg");
+  }
 }
 
 /* Footer */
@@ -471,4 +533,43 @@ main > section + section {
 
 .footer .attribution a {
   color: inherit;
+}
+
+.secondary-nav > ul {
+  padding: 0;
+}
+
+@media (min-width: 62.5rem) {
+  .footer {
+    text-align: left;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1.25fr 2.25fr 1fr;
+    gap: 70px 100px;
+  }
+
+  .footer-content > * {
+    margin-top: 0;
+  }
+
+  .footer .secondary-nav {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .footer .secondary-nav > * {
+    margin-top: 0;
+  }
+
+  .footer .secondary-nav button {
+    padding-left: 0;
+  }
+
+  .footer .attribution {
+    justify-self: center;
+    grid-column: 1 / -1;
+  }
 }
