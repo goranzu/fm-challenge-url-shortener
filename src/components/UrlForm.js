@@ -1,21 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-/*
-error_code
-1 	No URL specified ("url" parameter is empty)
-2 	Invalid URL submitted
-3 	Rate limit reached. Wait a second and try again
-4 	IP-Address has been blocked because of violating our terms of service
-5 	shrtcode code (slug) already taken/in use
-6 	Unknown error
-7 	No code specified ("code" parameter is empty)
-8 	Invalid code submitted (code not found/there is no such short-link)
-9 	Missing required parameters
-10 	Trying to shorten a disallowed Link. More information on disallowed links
-*/
-
-const API_URL = "https://api.shrtco.de/v2/";
+const API_URL = "https://api.shrtco.de/v2";
 
 function shortenPath(url) {
   return `/shorten?url=${url}`;
@@ -37,12 +23,7 @@ function UrlForm({ shortLinks, setShortlinks, setLoading }) {
     setLoading(true);
     try {
       const response = await fetch(`${API_URL}${shortenPath(url)}`);
-      let data;
-      if (response.ok) {
-        data = await response.json();
-      } else {
-        console.log("error", data);
-      }
+      let data = await response.json();
 
       const link = {
         originalLink: data.result.original_link,
@@ -53,7 +34,6 @@ function UrlForm({ shortLinks, setShortlinks, setLoading }) {
       setUrl("");
       setLoading(false);
     } catch (error) {
-      console.log(error);
       setLoading(false);
       setError(error.message);
     }
